@@ -1,0 +1,9 @@
+---
+- Students:
+  - name: abc
+    age : 12
+    address:
+       dno: mr10
+       street: mohlla
+       pincode: 123456
+
