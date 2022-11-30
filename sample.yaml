@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks: 
-- name: Install apache httpd
-  apt:
-      name: apache2
-      state: present
+   - name: Install apache httpd
+     apt:
+       name: apache2
+       state: present
