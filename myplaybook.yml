@@ -1,7 +1,7 @@
 ---
   # Play1 - WebServer related tasks
   - name: Play Web - Create apache directories and username in web servers
-    hosts: webservers
+    hosts: all
     become: yes
     become_user: root
     tasks:
@@ -19,7 +19,7 @@
         
   # Play2 - Application Server related tasks
   - name: Play app - Create tomcat directories and username in app servers
-    hosts: appservers
+    hosts: all
     become: yes
     become_user: root
     tasks:
