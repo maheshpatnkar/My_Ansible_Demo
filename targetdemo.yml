@@ -1,0 +1,6 @@
+--- #demo file
+- hosts: all
+  user: maha
+  become: yes
+  connection: ssh
+  gather_facts: yes
