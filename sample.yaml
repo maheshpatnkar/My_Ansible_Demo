@@ -1,6 +1,8 @@
 ---
 - hosts: all
   become: yes
+  connection: ssh
+  user: maha
   tasks: 
    - name: Install apache httpd
      apt:
