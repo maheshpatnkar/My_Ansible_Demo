@@ -1,5 +1,5 @@
 ---
-- hosts: staging
+- hosts: all
   name: Install
   become: yes
   tasks:
