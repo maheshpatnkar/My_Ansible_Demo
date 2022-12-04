@@ -1,0 +1,18 @@
+---
+- hosts: staging
+  name: Install
+  become: yes
+  tasks:
+          - name: Install Apache2 on  Ubuntu server
+            apt:
+                    name: apache2
+                    state: present
+                    update_cache: yes
+            notify:     # once installation done notify the hander to execute task
+                    - Restart apache2
+
+  handlers:
+          - name: Restart apache2
+            service:
+                    name:  apache2
+                    state: restarted
