@@ -2,11 +2,10 @@
 - hosts: all
   user: maha
   become: yes
-  connection: ssh
   tasks: 
- - name: install apcahe in ubuntu
-   command: apt-get -y install apache
-   when: ansible_os_family == "ubuntu"
-   name: install httpd for redhat family
-   command: yum -y install httpd
-   when: ansible_os_family == "redhat"
+        - name: install apcahe in ubuntu
+          command: apt-get -y install apache
+          when: ansible_os_family == "Debian"
+        - name: install httpd for redhat family
+          command: yum -y install httpd
+          when: ansible_os_family == "redhat"
