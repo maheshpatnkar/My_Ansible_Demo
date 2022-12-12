@@ -4,7 +4,7 @@
   become: yes
   tasks: 
         - name: install apcahe in ubuntu
-          command: apt-get install apache
+          command: apt install apache
           when: ansible_os_family == "Debian"
         - name: install httpd for redhat family
           command: yum -y install httpd
