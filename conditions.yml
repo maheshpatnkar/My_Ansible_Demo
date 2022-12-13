@@ -4,8 +4,25 @@
   become: yes
   tasks: 
         - name: install apcahe in ubuntu
-          command: apt install apache
+          apt:
+            name: apache2
+            state: present
           when: ansible_os_family == "Debian"
+
+        - name: start apache2 server
+          service:
+            name: apache2
+            state: started
+          when: ansible_os_family == "Debian"
+
         - name: install httpd for redhat family
-          command: yum -y install httpd
+          yum:
+            name: httpd
+            state: present
+          when: ansible_os_family == "redhat"
+
+        - name: start httpd server
+          service:
+            name: apache2
+            state: started
           when: ansible_os_family == "redhat"

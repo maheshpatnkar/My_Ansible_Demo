@@ -3,7 +3,6 @@
   - name: Play Web - Create apache directories and username in web servers
     hosts: all
     become: yes
-    become_user: root
     tasks:
       - name: create username apacheadm
         user:
@@ -21,7 +20,6 @@
   - name: Play app - Create tomcat directories and username in app servers
     hosts: all
     become: yes
-    become_user: root
     tasks:
       - name: Create a username for tomcat
         user:
