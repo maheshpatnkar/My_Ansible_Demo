@@ -1,6 +1,6 @@
 ---
 - hosts: webserver
-  #user: maha
+  user: maha
   become: yes
   tasks: 
         - name: install apcahe in ubuntu
